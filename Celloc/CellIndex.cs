@@ -9,11 +9,11 @@ namespace Celloc
 		ZeroBased
 	}
 
-    public static class CellConverter
+	public static class CellIndex
     {
-		private const string ColumnRowPattern = "^(?<column>[a-zA-Z]{0,3})(?<row>[0-9]+)$";
+		private const string ColumnRowPattern = "^(?<column>[a-zA-Z]+)(?<row>[0-9]+)$";
 
-		public static Tuple<int, int> Parse(string cell, Offset offset = Offset.None)
+		public static (int column, int row) Translate(string cell, Offset offset = Offset.None)
 		{
 			if (string.IsNullOrEmpty(cell))
 				throw new ArgumentNullException(nameof(cell));
@@ -22,21 +22,28 @@ namespace Celloc
 
 			ValidateCellFormat(cell, regex);
 
-			var match = regex.Match(cell);
-
-			var column = match.Groups["column"].Value;
-			var row = Convert.ToInt32(match.Groups["row"].Value);
-
-			ValidateRowRange(row);
-
-			var columnNumber = ConvertColumnToNumber(column);
-
-			return ApplyOffset(offset, columnNumber, row);
+			return CalculateIndex(cell, offset, regex);
 		}
 
-	    private static Tuple<int, int> ApplyOffset(Offset offset, int column, int row)
+	    private static (int column, int row) CalculateIndex(string cell, Offset offset, Regex regex)
 	    {
-		    return offset == Offset.None ? new Tuple<int, int>(column, row) : new Tuple<int, int>(column - 1, row - 1);
+		    var match = regex.Match(cell);
+
+		    var column = match.Groups["column"].Value;
+		    var row = Convert.ToInt32(match.Groups["row"].Value);
+
+		    ValidateRowRange(row);
+
+		    var columnNumber = ConvertColumnToNumber(column);
+
+		    return ApplyOffset(offset, columnNumber, row);
+	    }
+
+	    private static (int column, int row) ApplyOffset(Offset offset, int column, int row)
+	    {
+		    return offset == Offset.None ?
+			    (column, row) : 
+			    (column - 1, row - 1);
 	    }
 
 	    private static void ValidateRowRange(int row)
