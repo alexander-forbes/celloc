@@ -17,3 +17,4 @@ CellIndex.Translate("A1", Offset.None) //(1,1)
 
 The default `Offset` is `None`.
 
+Algorithm by [Ian Nelson](https://stackoverflow.com/a/667902/31770).
