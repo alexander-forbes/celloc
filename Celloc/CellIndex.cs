@@ -13,7 +13,7 @@ namespace Celloc
     {
 		private const string ColumnRowPattern = "^(?<column>[a-zA-Z]+)(?<row>[0-9]+)$";
 
-		public static (int column, int row) Translate(string cell, Offset offset = Offset.None)
+		public static (int Column, int Row) Translate(string cell, Offset offset = Offset.None)
 		{
 			if (string.IsNullOrEmpty(cell))
 				throw new ArgumentNullException(nameof(cell));
@@ -25,7 +25,7 @@ namespace Celloc
 			return CalculateIndex(cell, offset, regex);
 		}
 
-	    private static (int column, int row) CalculateIndex(string cell, Offset offset, Regex regex)
+	    private static (int Column, int Row) CalculateIndex(string cell, Offset offset, Regex regex)
 	    {
 		    var match = regex.Match(cell);
 
@@ -39,7 +39,7 @@ namespace Celloc
 		    return ApplyOffset(offset, columnNumber, row);
 	    }
 
-	    private static (int column, int row) ApplyOffset(Offset offset, int column, int row)
+	    private static (int Column, int Row) ApplyOffset(Offset offset, int column, int row)
 	    {
 		    return offset == Offset.None ?
 			    (column, row) : 
