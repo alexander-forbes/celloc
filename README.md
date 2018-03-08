@@ -26,7 +26,7 @@ CellIndex.Translate("A1", Offset.None) //(1,1)
 To translate a range to a zero-based index, specify the cell index and the offset type as `Offset.ZeroBased`:
 
 ```C#
-CellIndex.Translate("A1:B3", Offset.ZeroBased) //((0,0),(1,2))
+CellRange.Translate("A1:B3", Offset.ZeroBased) //((0,0),(1,2))
 ```
 
 To translate a range to a non-zero based index, specify the cell index and the offset type as `Offset.None`: 
