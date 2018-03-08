@@ -10,7 +10,7 @@ namespace Celloc.Tests
 		public void It_should_throw_an_exception_when_the_row_is_out_of_range()
 		{
 			var exception = Assert.Throws<ArgumentOutOfRangeException>(() => CellIndex.Translate("XFE1048577"));
-			Assert.AreEqual("Row must be greater than 0 and less than 1048576.\r\nParameter name: row", exception.Message);
+			Assert.AreEqual($"Row must be greater than 0 and less than 1048576.{Environment.NewLine}Parameter name: row", exception.Message);
 		}
 
 		[Test]
