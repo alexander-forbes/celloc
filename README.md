@@ -9,9 +9,10 @@ To install the package from NuGet, run the following command:
 `Install-Package Celloc`
 
 ## Usage
-To translate a cell value to a zero-based index, specify the cell index and the offset type as `Offset.ZeroBased`:
 
 ### Cells
+To translate a cell value to a zero-based index, specify the cell index and the offset type as `Offset.ZeroBased`:
+
 ```C#
 CellIndex.Translate("A1", Offset.ZeroBased) //(0,0)
 ```
