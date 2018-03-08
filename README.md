@@ -1,8 +1,11 @@
 # Celloc
 An Excel cell index converter.
 
-## Usage
+# NuGet
+To install the package from NuGet, run the following command:
+`Install-Package Celloc`
 
+## Usage
 To translate a cell value to a zero-based index, specify the cell index and the offset type as `Offset.ZeroBased`:
 
 ```C#
