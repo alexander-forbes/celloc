@@ -3,7 +3,7 @@
 # Celloc
 An Excel cell index converter.
 
-# NuGet
+## NuGet
 To install the package from NuGet, run the following command:
 `Install-Package Celloc`
 
