@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CellIndexTests.cs" />
+    <Compile Include="CellRangeTests.cs" />
+    <Compile Include="CellTests.cs" />
+    <Compile Include="ColumnTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

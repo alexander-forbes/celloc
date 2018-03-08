@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cell.cs" />
     <Compile Include="CellIndex.cs" />
+    <Compile Include="CellRange.cs" />
+    <Compile Include="Column.cs" />
+    <Compile Include="Offset.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
