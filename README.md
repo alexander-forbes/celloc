@@ -17,7 +17,7 @@ To translate a cell value to a zero-based tuple, specify the cell and the offset
 CellIndex.Translate("A1", Offset.ZeroBased) //(0,0)
 ```
 
-To translate a cell value to a non-zero based tupele, specify the cell and the offset type as `Offset.None`: 
+To translate a cell value to a non-zero based tuple, specify the cell and the offset type as `Offset.None`: 
 
 ```C#
 CellIndex.Translate("A1", Offset.None) //(1,1)
