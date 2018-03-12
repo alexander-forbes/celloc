@@ -20,5 +20,18 @@ namespace Celloc
 			    (column, row) : 
 			    (column - 1, row - 1);
 	    }
-	}
+
+		public static string Translate((int Column, int Row) cell, Offset offset = Offset.None)
+		{
+			if (cell.Column < (offset == Offset.ZeroBased ? 0 : 1))
+				throw new ArgumentOutOfRangeException(nameof(cell));
+
+			if (cell.Row < (offset == Offset.ZeroBased ? 0 : 1))
+				throw new ArgumentOutOfRangeException(nameof(cell));
+
+			return offset == Offset.ZeroBased ?
+			    $"{Column.ConvertToString(cell.Column + 1)}{cell.Row + 1}" :
+			    $"{Column.ConvertToString(cell.Column)}{cell.Row}";
+	    }
+    }
 }

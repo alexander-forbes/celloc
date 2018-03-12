@@ -38,4 +38,26 @@ namespace Celloc.Tests
 			Assert.AreEqual($"Value cannot be null.{Environment.NewLine}Parameter name: column", exception.Message);
 		}
 	}
+
+	[TestFixture]
+	public class When_calling_convert_to_string_on_column
+	{
+		[Test]
+		public void It_should_throw_an_exception_when_the_column_parameter_is_less_than_1()
+		{
+			var exception = Assert.Throws<ArgumentOutOfRangeException>(() => Column.ConvertToString(0));
+
+			Assert.AreEqual(
+				$"Specified argument was out of the range of valid values.{Environment.NewLine}Parameter name: column", 
+				exception.Message
+			);
+		}
+
+		[Test]
+		public void It_should_convert_a_number_to_its_corresponding_string_representation()
+		{
+			Assert.AreEqual("A", Column.ConvertToString(1));
+			Assert.AreEqual("XFD", Column.ConvertToString(16384));
+		}
+	}
 }

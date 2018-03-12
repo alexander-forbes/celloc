@@ -2,14 +2,14 @@
 <package >
 	<metadata>
 		<id>Celloc</id>
-		<version>2.1.0</version>
+		<version>2.2.0</version>
 		<title>Celloc</title>
 		<authors>Sydney du Plooy</authors>
 		<licenseUrl>https://github.com/sduplooy/Celloc/blob/master/LICENSE</licenseUrl>
 		<projectUrl>https://github.com/sduplooy/Celloc</projectUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>An Excel cell index converter.</description>
-		<releaseNotes>Adds CellRange.</releaseNotes>
+		<releaseNotes>Adds translation for integer tuple to string.</releaseNotes>
 		<copyright>Copyright (c) 2018 Sydney du Plooy</copyright>
 		<tags>Celloc Excel Column Number Converter</tags>
 		<dependencies>
