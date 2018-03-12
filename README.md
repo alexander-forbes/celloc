@@ -50,4 +50,4 @@ CellRange.Translate("A1:B3", Offset.None) //((1,1),(2,3))
 
 The default `Offset` is `None`.
 
-Algorithm by [Ian Nelson](https://stackoverflow.com/a/667902/31770).
+Algorithms by [Ian Nelson](https://stackoverflow.com/a/667902/31770) and [Graham](https://stackoverflow.com/a/182924/31770).
