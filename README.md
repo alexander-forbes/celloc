@@ -23,6 +23,18 @@ To translate a cell value to a non-zero based tuple, specify the cell and the of
 CellIndex.Translate("A1", Offset.None) //(1,1)
 ```
 
+To translate an integer tuple to a name, specify the cell and the offset type as `Offset.None`: 
+
+```C#
+CellIndex.Translate((1,1), Offset.None) //"A1"
+```
+
+To translate a zero-based integer tuple to a name, specify the cell and the offset type as `Offset.ZeroBased`: 
+
+```C#
+CellIndex.Translate((0,0), Offset.ZeroBased) //"A1"
+```
+
 ### Ranges
 To translate a range to a zero-based tuple, specify the range and the offset type as `Offset.ZeroBased`:
 
