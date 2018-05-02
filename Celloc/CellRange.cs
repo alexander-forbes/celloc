@@ -7,7 +7,7 @@ namespace Celloc
 	{
 		private const string RangePattern = "^(?<fromColumn>[a-zA-Z]{0,3})(?<fromRow>[0-9]+):(?<toColumn>[a-zA-Z]{0,3})(?<toRow>[0-9]+)$";
 
-		public static ((int Column, int Row),(int Column, int Row)) Translate(string range, Offset offset = Offset.None)
+		public static ((int Column, int Row), (int Column, int Row)) Translate(string range, Offset offset = Offset.None)
 		{
 			if (string.IsNullOrEmpty(range))
 				throw new ArgumentNullException(nameof(range));
@@ -26,12 +26,20 @@ namespace Celloc
 			return ApplyOffset(offset, fromCell, toCell);
 		}
 
-		private static ((int Column, int Row), (int Column, int Row)) ApplyOffset(Offset offset, 
+		private static ((int Column, int Row), (int Column, int Row)) ApplyOffset(Offset offset,
 			(int Column, int Row) fromCell, (int Column, int Row) toCell)
 		{
-			return offset == Offset.None ? 
-				((fromCell.Column, fromCell.Row), (toCell.Column, toCell.Row)) : 
+			return offset == Offset.None ?
+				((fromCell.Column, fromCell.Row), (toCell.Column, toCell.Row)) :
 				((fromCell.Column - 1, fromCell.Row - 1), (toCell.Column - 1, toCell.Row - 1));
+		}
+
+		public static string Translate(((int Column, int Row), (int Column, int Row)) range, Offset offset = Offset.None)
+		{
+			var fromCell = CellIndex.Translate(range.Item1, offset);
+			var toCell = CellIndex.Translate(range.Item2, offset);
+
+			return $"{fromCell}:{toCell}";
 		}
 	}
 }

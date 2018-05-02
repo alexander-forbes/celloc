@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C520A01B-2B0F-4E0C-82CE-6C58C6F78309}"
 	ProjectSection(SolutionItems) = preProject
 		Celloc.nuspec = Celloc.nuspec
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
@@ -29,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11E3690D-BA2A-47B2-B211-D289BC0E2D67}
 	EndGlobalSection
 EndGlobal
