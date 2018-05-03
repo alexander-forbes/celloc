@@ -17,19 +17,19 @@ To translate a cell value to a zero-based tuple, specify the cell and the offset
 CellIndex.Translate("A1", Offset.ZeroBased) //(0,0)
 ```
 
-To translate a cell value to a non-zero based tuple, specify the cell and the offset type as `Offset.None`: 
+To translate a cell value to a non-zero based tuple, specify the cell and the offset type as `Offset.None`:
 
 ```C#
 CellIndex.Translate("A1", Offset.None) //(1,1)
 ```
 
-To translate an integer tuple to a name, specify the cell and the offset type as `Offset.None`: 
+To translate an integer tuple to a name, specify the cell and the offset type as `Offset.None`:
 
 ```C#
 CellIndex.Translate((1,1), Offset.None) //"A1"
 ```
 
-To translate a zero-based integer tuple to a name, specify the cell and the offset type as `Offset.ZeroBased`: 
+To translate a zero-based integer tuple to a name, specify the cell and the offset type as `Offset.ZeroBased`:
 
 ```C#
 CellIndex.Translate((0,0), Offset.ZeroBased) //"A1"
@@ -42,10 +42,22 @@ To translate a range to a zero-based tuple, specify the range and the offset typ
 CellRange.Translate("A1:B3", Offset.ZeroBased) //((0,0),(1,2))
 ```
 
-To translate a range to a non-zero based tuple, specify the range and the offset type as `Offset.None`: 
+To translate a range to a non-zero based tuple, specify the range and the offset type as `Offset.None`:
 
 ```C#
 CellRange.Translate("A1:B3", Offset.None) //((1,1),(2,3))
+```
+
+To translate an integer tuple range to a name, specify the range and offset type as `Offset.None`:
+
+```C#
+CellRange.Translate(((1,1),(1,1)), Offset.None) //A1:A1
+```
+
+To translate a zero-based integer tuple range to a name, specify the range and offset type as `Offset.ZeroBased`:
+
+```C#
+CellRange.Translate(((0,0),(0,0)), Offset.ZeroBased) //A1:A1
 ```
 
 The default `Offset` is `None`.
