@@ -3,6 +3,7 @@
 
 # Celloc
 ![Logo](https://raw.githubusercontent.com/wiki/sduplooy/Celloc/images/186401-64.png)
+
 An Excel cell index converter.
 
 ## NuGet
