@@ -14,14 +14,14 @@ namespace Celloc.Tests
 		}
 
 		[Test]
-		public void It_should_translate_the_cell_to_an_integer_tuple()
+		public void It_should_translate_the_cell_to_a_tuple()
 		{
 			Assert.AreEqual((1, 1), CellIndex.Translate("A1"));
 			Assert.AreEqual((16384, 1048576), CellIndex.Translate("XFD1048576"));
 		}
 
 		[Test]
-		public void It_should_translate_the_cell_to_a_zero_based_integer_tuple()
+		public void It_should_translate_the_cell_to_a_zero_based_tuple()
 		{
 			Assert.AreEqual((0, 0), CellIndex.Translate("A1", Offset.ZeroBased));
 			Assert.AreEqual((16383, 1048575), CellIndex.Translate("XFD1048576", Offset.ZeroBased));

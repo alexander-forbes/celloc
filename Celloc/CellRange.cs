@@ -9,8 +9,7 @@ namespace Celloc
 
 		public static ((int Column, int Row), (int Column, int Row)) Translate(string range, Offset offset = Offset.None)
 		{
-			if (string.IsNullOrEmpty(range))
-				throw new ArgumentNullException(nameof(range));
+			GuardAgainstNullRange(range);
 
 			var regex = new Regex(RangePattern);
 			var match = regex.Match(range);
@@ -40,6 +39,38 @@ namespace Celloc
 			var toCell = CellIndex.Translate(range.Item2, offset);
 
 			return $"{fromCell}:{toCell}";
+		}
+
+		public static bool IsSameColumn(((int Column, int Row), (int Column, int Row)) range)
+		{
+			return Equals(range.Item1.Column, range.Item2.Column);
+		}
+
+		public static bool IsSameRow(((int Column, int Row), (int Column, int Row)) range)
+		{
+			return Equals(range.Item1.Row, range.Item2.Row);
+		}
+
+		public static bool IsSameColumn(string range)
+		{
+			GuardAgainstNullRange(range);
+
+			var tuple = Translate(range);
+			return IsSameColumn(tuple);
+		}
+
+		public static bool IsSameRow(string range)
+		{
+			GuardAgainstNullRange(range);
+
+			var tuple = Translate(range);
+			return IsSameRow(tuple);
+		}
+
+		private static void GuardAgainstNullRange(string range)
+		{
+			if (string.IsNullOrEmpty(range))
+				throw new ArgumentNullException(nameof(range));
 		}
 	}
 }
