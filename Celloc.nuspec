@@ -2,7 +2,7 @@
 <package >
 	<metadata>
 		<id>Celloc</id>
-		<version>2.4.0</version>
+		<version>2.5.0</version>
 		<title>Celloc</title>
 		<authors>Sydney du Plooy</authors>
 		<licenseUrl>https://github.com/sduplooy/Celloc/blob/master/LICENSE</licenseUrl>
@@ -10,7 +10,7 @@
         <iconUrl>https://raw.githubusercontent.com/wiki/sduplooy/Celloc/images/186401-64.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>An Excel cell index converter.</description>
-		<releaseNotes>Adds methods to check whether a range has the same column or row.</releaseNotes>
+		<releaseNotes>Adds a Column type that affords conversions between column names and numbers.</releaseNotes>
 		<copyright>Copyright (c) 2018 Sydney du Plooy</copyright>
 		<tags>Celloc Excel Column Number Converter</tags>
 		<dependencies>

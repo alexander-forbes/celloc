@@ -2,7 +2,7 @@
 
 namespace Celloc
 {
-	internal static class Column
+	public static class Column
 	{
 		public static int ConvertToNumber(string column)
 		{
