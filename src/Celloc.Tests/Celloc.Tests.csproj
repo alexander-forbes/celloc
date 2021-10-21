@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<OutputType>Library</OutputType>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<Description>An Excel cell index converter.</Description>
+	</PropertyGroup>
+	<ItemGroup>
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Celloc\Celloc.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NUnit" Version="3.13.2" />
+		<PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+	</ItemGroup>
+</Project>

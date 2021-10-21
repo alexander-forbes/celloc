@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Celloc", "Celloc\Celloc.csproj", "{D81681D6-7504-4E5D-9767-5B3DB28E882D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Celloc.Tests", "Celloc.Tests\Celloc.Tests.csproj", "{D032D2F9-691F-49F1-8C12-DDF7FA138B93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D81681D6-7504-4E5D-9767-5B3DB28E882D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81681D6-7504-4E5D-9767-5B3DB28E882D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81681D6-7504-4E5D-9767-5B3DB28E882D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81681D6-7504-4E5D-9767-5B3DB28E882D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D032D2F9-691F-49F1-8C12-DDF7FA138B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D032D2F9-691F-49F1-8C12-DDF7FA138B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D032D2F9-691F-49F1-8C12-DDF7FA138B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D032D2F9-691F-49F1-8C12-DDF7FA138B93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11E3690D-BA2A-47B2-B211-D289BC0E2D67}
+	EndGlobalSection
+EndGlobal
